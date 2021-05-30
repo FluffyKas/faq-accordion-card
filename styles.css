@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;700&display=swap');
+
+:root {
+
+  /* COLOURS */
+
+  /* BACKGROUND-GRADIENT */
+
+  --clr-gradient-violet: hsl(273, 75%, 66%);
+  --clr-gradient-blue: hsl(240, 73%, 65%);
+
+  /* PRIMARY COLOURS */
+
+  --clr-primary-blue: hsl(238, 29%, 16%);
+  --clr-primary-red: hsl(14, 88%, 65%);
+
+  /* NEUTRAL COLOURS */
+
+  --clr-neutral-gray-200: hsl(240, 5%, 91%);
+  --clr-neutral-gray-600: hsl(240, 6%, 50%);
+  --clr-neutral-gray-800: hsl(237, 12%, 33%);
+
+  /* FONTS */
+
+  --ff-main: 'Kumbh Sans', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--ff-main);
+  min-height: 100vh;
+  background: linear-gradient(var(--clr-gradient-violet) 13%, var(--clr-gradient-blue));
+  display: grid;
+  place-items: center;
+}
+
+.faq {
+  background-color: white;
+  width: 86.5%;
+  max-width: 360px;
+  margin: 9rem auto;
+  border-radius: 24px;
+  position: relative;
+}
+
+/* MOBILE ILLUSTRATIONS */
+
+.faq::before {
+  content: "";
+  background: url(images/illustration-woman-online-mobile.svg) no-repeat;
+  width: 268px;
+  height: 180px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-55%, -55%);
+}
+
+.faq::after {
+  content: "";
+  background: url(images/bg-pattern-mobile.svg) no-repeat;
+  width: 268px;
+  height: 180px;
+  position: absolute;
+  top: 6.5rem;
+  left: 50%;
+  transform: translate(-45%, -53%);
+}
+
+/* QUESTION TITLE + ARROW */
+
+.questions {
+  padding-inline: 1.5rem .5rem;
+  padding-block: 9rem 3rem;
+}
+
+.questions__title {
+  text-align: center;
+  font-size: 1.92rem;
+  color: var(--clr-primary-blue);
+  padding-block-end: .75rem;
+}
+
+.question {
+  color: var(--clr-neutral-gray-800);
+  font-weight: 400;
+}
+
+.question__title {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  align-items: flex-start;
+}
+
+.question__title::after {
+  content: "";
+  display: block;
+  width: 95%;
+  background: var(--clr-neutral-gray-200);
+  height: 1px;
+  position: absolute;
+  bottom: 0;
+}
+
+.question__title__text {
+  font-size: .8rem;
+  line-height: 1.3;
+  transition: color .15s ease-in-out;
+  padding-block-start: 1rem;
+}
+
+.question__title__text:hover {
+  color: var(--clr-primary-red);
+  cursor: pointer;
+}
+
+.question__button {
+  border: 0;
+  background: inherit;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+/* ANSWERS */
+
+.question__text {
+  display: none;
+  position: relative;
+  color: var(--clr-neutral-gray-600);
+}
+
+.question__text:before {
+  content: "";
+  display: block;
+  width: 112%;
+  background: var(--clr-neutral-gray-200);
+  height: 1px;
+  position: absolute;
+  bottom: 0;
+}
+
+/* TOGGLE STYLES */
+
+.show-text .question__text {
+  display: block;
+  font-size: .765rem;
+  line-height: 1.7;
+  width: 85%;
+  padding-block-end: 1rem;
+}
+
+.show-text .question__button {
+  transform: rotate(180deg);
+}
+
+.show-text .question__title {
+  font-weight: 700;
+  color: var(--clr-primary-blue);
+}
+
+.show-text .question__title::after {
+  display: none;
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (min-width: 6500px) {
+
+  .faq {
+    max-width: 500px;
+  }
+}
+
+@media screen and (min-width: 900px) {
+
+  .faq {
+    max-width: 925px;
+    display: flex;
+    justify-content: flex-end;
+    background:
+    url(images/illustration-woman-online-desktop.svg) bottom 3.1rem left -5.1rem no-repeat,
+    url(images/bg-pattern-desktop.svg) bottom -8rem left -35.5rem no-repeat;
+    background-color: white; 
+  }
+
+  .faq::before {
+    content: "";
+    background: url(images/illustration-box-desktop.svg) no-repeat;
+    width: 140px;
+    height: 190px;
+    position: absolute;
+    top: 62.5%;
+    left: -1.5%;
+    transform: translate(-55%, -55%);
+  }
+  
+  .faq::after {
+    display: none;
+  }
+
+  .questions {
+    width: 50%;
+    padding-block: 4.5rem;
+    padding-inline-end: 5.5rem;
+  }
+
+  .questions__title {
+    text-align: left;
+    padding-block-end: 1.5rem;
+  }
+
+  .question {
+    font-weight: 400;
+  }
+
+  .question__title p {
+    font-size: .9rem;
+  }
+}
