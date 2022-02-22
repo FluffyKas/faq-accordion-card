@@ -29,7 +29,7 @@ Users should be able to:
 
 ### Links
 
-[Solution URL](https://fluffykas.github.io/faq-accordion-card/)
+[Solution URL](https://faq-accordion-card-fem.netlify.app/)
 
 ## My process
 
