@@ -10,7 +10,6 @@ This is a solution to the [FAQ accordion card challenge on Frontend Mentor](http
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
-  - [Useful resources](#useful-resources)
 - [Author](#author)
 
 ## Overview
@@ -42,10 +41,6 @@ Users should be able to:
 - CSS Grid
 - Javascript
 - Mobile-first workflow
-
-### Useful resources
-
-- freeCodeCamp's 15 Javascript Projects video: (https://www.youtube.com/watch?v=3PHXvlpOkf4)
 
 ## Author
 
