@@ -10,6 +10,7 @@ This is a solution to the [FAQ accordion card challenge on Frontend Mentor](http
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
+  - [Thoughts](#thoughts)
 - [Author](#author)
 
 ## Overview
@@ -41,6 +42,12 @@ Users should be able to:
 - CSS Grid
 - Javascript
 - Mobile-first workflow
+
+### Thoughts
+
+For each question this solution uses an article element with a button and some pragraphs inside. For now, I leave it as it is, but I found some HTML elements that might be more suitable for creating a [disclosure widget](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details). Apart from IE, most browsers seem to support the details element and it looks fine from the [accessibility point of view](https://www.scottohara.me/blog/2018/09/03/details-and-summary.html).
+
+I may update this solution in the future, until then, this element is an interesting thing to note, at least.
 
 ## Author
 
