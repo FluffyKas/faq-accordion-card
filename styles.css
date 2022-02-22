@@ -43,7 +43,6 @@ body {
   background-color: white;
   width: 86.5%;
   max-width: 360px;
-  margin: 9rem auto;
   border-radius: 24px;
   position: relative;
 }
@@ -71,6 +70,21 @@ body {
   left: 50%;
   transform: translate(-45%, -53%);
 }
+
+/* KEYFRAMES */
+
+@keyframes boxHop {
+  from {
+    transform: translate(-55%, -55%);
+  }
+  50% {
+    transform: translate(-55%, -57.5%);
+  }
+  to {
+    transform: translate( -55% ,-55%);
+  }
+}
+
 
 /* QUESTION TITLE + ARROW */
 
@@ -196,8 +210,10 @@ body {
     height: 190px;
     position: absolute;
     top: 66%;
-    left: -1.5%;
+    left: -1.6%;
     transform: translate(-55%, -55%);
+    animation: boxHop 2s ease-in-out;
+    animation-iteration-count: infinite;
   }
   
   .faq::after {
@@ -206,13 +222,14 @@ body {
 
   .questions {
     width: 50%;
-    padding-block: 4.5rem;
-    padding-inline-end: 5.5rem;
+    padding-block-start: 4.5rem;
+    padding-inline-end: 5rem;
   }
 
   .questions__title {
     text-align: left;
     padding-block-end: 1.5rem;
+    font-size: 2.2rem;
   }
 
   .question {
